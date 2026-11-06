@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How PulseTorrent handles torrent connections, downloaded files, Android permissions, Firebase Analytics, and voluntary feedback.">
+  <title>Privacy policy · PulseTorrent</title>
+  <link rel="canonical" href="https://firebirdapps.com/pulsetorrent/privacy-policy.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="index.html"><img class="brand-icon" src="assets/app-icon.png" width="40" height="40" alt="">PulseTorrent</a>
+    <nav aria-label="Main navigation"><a href="privacy-policy.html" aria-current="page">Privacy policy</a><a href="terms-of-use.html">Terms of use</a></nav>
+  </header>
+  <main id="main">
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective and last updated: 6 November 2026</p>
+    <p>Firebirdapps ("we", "us") provides PulseTorrent, an Android application with package identifier <strong>com.firebirdapps.pulsetorrent</strong>. This policy explains how information is handled when you use the app, contact us, or visit this site.</p>
+    <div class="summary">Your torrent downloads run on your device and connect directly to peers and trackers. We do not operate a server that stores your torrent library or downloaded content. Firebase receives app usage analytics. Feedback messages are sent to Firebase only when you choose to submit them.</div>
+
+    <h2>1. Torrent connections</h2>
+    <p>PulseTorrent uses the BitTorrent protocol to download and seed files. Your device connects directly to peers, trackers, and, when enabled, distributed hash table (DHT) and local peer discovery participants. These connections can reveal your IP address, listening port, torrent identifiers (info hashes), client/protocol information, and download or piece availability. Peers exchange torrent metadata and the file pieces needed for the selected torrent. Tracker operators and other participants process this information under their own practices.</p>
+    <p>When you import a torrent from an HTTPS URL, that website receives the request and technical connection information such as your IP address. Credentials or private tracker keys included in links you provide may be sent to the relevant host or tracker. We do not supply a torrent catalog or host the files you download. BitTorrent activity is not anonymous simply because this app does not require an account.</p>
+    <p>The app does not send torrent titles, info hashes, magnet links, file paths, tracker addresses, peer addresses, or downloaded file contents to our feedback database or as custom Analytics event data.</p>
+
+    <h2>2. Files and information on your device</h2>
+    <p>The app keeps torrent metadata, queue and resume information, file priorities, tracker settings, download history, and completed-file library records locally so downloads can be managed and restored. Interface, network, bandwidth, battery, and seeding preferences are also stored on your device.</p>
+    <p>New downloaded files are saved in <strong>Downloads/PulseTorrent</strong>, in a separate folder for each torrent. Earlier saved downloads can remain in their original folders. Public Downloads files can be accessed by you and by other apps with the relevant Android permissions. Removing a torrent and keeping its files does not delete those files; completed files can remain in the app's library. Deletion choices in the app and your file manager control those files. Android may retain copies you share or save elsewhere.</p>
+    <p>Selected torrent files may be copied into temporary app storage for importing. Opening a completed file grants the chosen viewer access to that file through Android. Sharing a magnet link sends it to the app or recipient you choose. Copying a link places it on the clipboard; the Paste control reads clipboard text when you use it. Android and apps permitted to access the clipboard may process that content.</p>
+    <p>The app does not provide its own cloud backup or library synchronization. Android may back up or restore ordinary app data depending on your device and backup settings; public downloaded files are managed separately.</p>
+
+    <h2>3. Android permissions and background operation</h2>
+    <ul>
+      <li><strong>Internet and network state:</strong> connect to torrent participants, import URLs, send Analytics and voluntary feedback, and apply network preferences.</li>
+      <li><strong>All files access (Android 11 and newer):</strong> allow the native torrent engine to create, verify, manage, and delete selected torrent files using direct paths in public Downloads. This is a broad Android permission; the app uses it for torrent file operations rather than scanning unrelated personal files.</li>
+      <li><strong>Storage permission (Android 8–10):</strong> read and write public download files. The Android file picker is used for torrent imports.</li>
+      <li><strong>Foreground service and notifications:</strong> run downloads while the interface is backgrounded and show progress, completion, and pause/resume controls. Torrent titles and progress may be visible in notifications or on your lock screen according to Android settings.</li>
+    </ul>
+    <p>You can manage these permissions in Android settings. Revoking file access prevents affected download operations until access is restored. Notification visibility and background execution depend on Android and your device. Wi-Fi only is off by default, so downloads may use mobile data unless you enable that restriction. DHT, local discovery, port mapping, and seeding settings affect which connections your device makes.</p>
+
+    <h2>4. Firebase Analytics</h2>
+    <p>PulseTorrent uses Google Analytics for Firebase to understand app usage and improve usability. Collection is enabled when the app initializes. The SDK processes standard events such as first opens, sessions, and engagement, together with an app-instance identifier, app/version information, device and operating-system details, language, event times, and usage information. Google may derive approximate geographic information from network connections.</p>
+    <p>The app also records generic screen views for Torrents, Library, Activity, and Settings. We do not attach torrent content or torrent identifiers to these events. Advertising ID collection and default advertising personalization signals are disabled, and the app does not request advertising identifier, advertising attribution, or advertising topics permissions. The current version has no in-app Analytics opt-out setting; collection is enabled while the app runs.</p>
+    <p>Google processes this information under its service settings and <a href="https://policies.google.com/privacy">Privacy Policy</a>. See also <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>. Account-free use and anonymous feedback do not mean Analytics uses no identifiers.</p>
+
+    <h2>5. Ratings, feedback, and support</h2>
+    <p>The app may offer a rating prompt after established use and a completed download. Reminder dates, session counts, prompt counts, and your reminder or opt-out choices are stored locally. These reminder records are not sent to the feedback database or as custom Analytics events. Automatic prompts offer <strong>Remind me later</strong> and <strong>Never ask again</strong>. Choosing four or five stars stops future automatic prompts. You can still open <strong>Rate app</strong> manually.</p>
+    <p>Choosing four or five stars opens the app's Google Play listing. Google handles any review you choose to post under its own terms; opening the listing does not submit a review, and we cannot confirm whether you posted one. Choosing one to three stars displays a feedback field. Selecting stars alone does not create a feedback database record. Only pressing <strong>Submit feedback</strong> sends a message to us.</p>
+    <p>Submitted feedback is stored in our Firebase Realtime Database. Each record contains your star rating, your message, a randomly generated submission identifier, and a server timestamp. No Firebase sign-in is required, and we do not attach a name, email, account identifier, device identifier, or torrent information. Your message may identify you if you choose to include personal details. Feedback can be accessed by authorized project administrators; anonymous public reads are disabled. Retrying within the same dialog uses the same record identifier to avoid duplicate entries.</p>
+    <p>If you email support, we receive your sender address, message, and any attachments you choose to send through our email provider. Please avoid including passwords, private tracker credentials, sensitive personal information, or downloaded content you do not have permission to share.</p>
+
+    <h2>6. Providers, sharing, and security</h2>
+    <p>Google provides Firebase Analytics, feedback storage, and Google Play. Torrent participants, URL hosts, your chosen file viewer or sharing destination, our website host, and your email provider receive the information needed for the requests you make. We do not sell personal information. We may disclose information we hold where legally required or necessary to protect users and our services.</p>
+    <p>Firebase feedback and HTTPS torrent imports use encrypted HTTPS connections. BitTorrent connections use the protocol and encryption settings configured in the app; these do not guarantee anonymity or conceal your network address from participants. No transmission or storage method is completely secure. Google and other providers may process information outside your country under their applicable policies and safeguards.</p>
+
+    <h2 id="data-deletion">7. Retention, deletion, and your choices</h2>
+    <p>Local torrent records and settings remain until you remove them, clear app data, or Android removes them, subject to backup restoration. Public downloaded files remain until you delete them. Clearing the app's private data does not delete every public file or a copy you have shared elsewhere.</p>
+    <p>Submitted feedback and support messages are retained while needed to review requests, improve the app, or meet legal requirements. The app does not automatically expire feedback records and has no account-based feedback deletion screen. Analytics retention is controlled by the project's Google Analytics settings and Google's service policies.</p>
+    <p>You can pause or remove torrents to stop downloading or seeding, adjust network and seeding preferences, manage Android permissions and notification visibility, decline feedback, choose Never ask again, and delete files you no longer want.</p>
+    <p>For access, correction, or deletion requests concerning information we hold, email <a href="mailto:firebirdapps.dev@gmail.com?subject=PulseTorrent%20privacy%20request">firebirdapps.dev@gmail.com</a>. For anonymous feedback, include the approximate submission date and enough message context to locate it without adding sensitive information. Anonymous submissions and Analytics identifiers may not be identifiable from an email address alone. We may need information to verify a request. Your applicable privacy rights depend on where you live.</p>
+
+    <h2>8. Children</h2>
+    <p>PulseTorrent is not directed to children under 13 or below the minimum age required in their country. We do not knowingly collect children's personal information through feedback or support. Contact us if you believe such information was submitted so we can investigate and address it.</p>
+
+    <h2>9. This website and updates</h2>
+    <p>These pages contain no Analytics scripts, submission forms, third-party font requests, or cookies set by our pages. GitHub Pages and infrastructure serving this domain may process technical information such as IP addresses and request logs to operate and secure the website. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>. External links are governed by the relevant provider's policy.</p>
+    <p>We may update this policy as the app or our practices change. Changes will be posted here with a revised date, with additional notice where required.</p>
+    <p>Privacy contact: <strong>Firebirdapps</strong>, <a href="mailto:firebirdapps.dev@gmail.com">firebirdapps.dev@gmail.com</a>.</p>
+  </main>
+  <footer>PulseTorrent · <a href="terms-of-use.html">Terms of use</a> · <a href="index.html">Support</a></footer>
+</body>
+</html>
